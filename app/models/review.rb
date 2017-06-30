@@ -3,7 +3,8 @@ class Review < ActiveRecord::Base
 
   validates :name, :presence => true
   validates :comment, :presence => true, length: { in: 50..250 }
-  validates :rating, :presence => true
+  validates :rating, :presence => true, :inclusion => { :in => 1..5 }
+
 
 
   scope :most_recent, -> { order(created_at: :asc) }
