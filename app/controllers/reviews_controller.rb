@@ -14,10 +14,6 @@ class ReviewsController < ApplicationController
       end
     end
 
-    def edit
-      @review = Review.find(params[:id])
-    end
-
     def update
       @review= Review.find(params[:id])
       if @review.update(review_params)
@@ -30,7 +26,7 @@ class ReviewsController < ApplicationController
     def destroy
       @review = Review.find(params[:id])
       @review.destroy
-      redirect_to reviews_path
+      redirect_to products_path
     end
 
   private
