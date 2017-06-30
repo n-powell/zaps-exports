@@ -2,10 +2,14 @@
 
 <%= form_for @product do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, placeholder:'Product Name'  %>
+  <br>
   <%= f.label :style %>
-  <%= f.text_field :style %>
+  <%= f.text_field :style, placeholder:'Beverage, Food, Other.' %>
+  <br>
   <%= f.label :price %>
-  <%= f.text_field :price %>
+  <%= f.text_field :price, placeholder:'Price per unit' %>
+  <br><br>
   <%= f.submit %>
+  <br><br>
 <% end %>

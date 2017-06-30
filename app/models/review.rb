@@ -7,7 +7,7 @@ class Review < ActiveRecord::Base
 
 
 
-  scope :most_recent, -> { order(created_at: :asc) }
+  scope :most_recent, -> { order(created_at: :asc).limit(5) }
   scope :oldest, -> { order(created_at: :desc) }
   scope :best_review, -> { order(rating: :asc).limit(2) }
 end

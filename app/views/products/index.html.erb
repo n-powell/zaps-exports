@@ -1,39 +1,45 @@
 <% content_for(:title, "All Products | Zaps") %>
 
-<h1>Products</h1>
-<div class="most-recent">
-  <h2>Most recent Products in Warehouse Inventory</h2>
-  <ul>
-    <% @products.most_recent.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %>
-      <br>
-    <%= product.created_at.strftime("%d %b. %Y") %>
-    <br>
-  </li><br>
-    <% end %>
-  </ul><br>
-</div>
-
-<div class="most-reviews">
-  <h2>Most Reviewed Products</h2>
-  <ul>
-    <% @products.most_reviews.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %></li>
-    <% end %>
-  </ul><br>
-</div>
-
-<div class="all-list">
-  <h3>All Products in inventory</h3>
-  <ul>
-    <% @products.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %></li>
-    <% end %>
-  </ul>
-</div>
+  <div class="container">
+    <h1>Products</h1>
+    <div class="most-recent">
+      <h2>Most recent Products in Warehouse Inventory</h2>
+      <ul>
+        <% @products.most_recent.each do |product| %>
+        <li><%= link_to product.name, product_path(product) %>
+          <br>
+        <%= product.created_at.strftime("%d %b. %Y") %>
+        <br>
+      </li><br>
+        <% end %>
+      </ul><br>
+    </div>
+  </div>
+  <div class="container">
+    <div class="most-reviews">
+      <h2>Most Reviewed Products</h2>
+      <ul>
+        <% @products.most_reviews.each do |product| %>
+        <li><%= link_to product.name, product_path(product) %></li>
+        <% end %>
+      </ul><br>
+    </div>
+  </div>
+  <div class="container">
+    <div class="all-list">
+      <h3>All Products in inventory</h3>
+      <ul>
+        <% @products.each do |product| %>
+        <li><%= link_to product.name, product_path(product) %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 
 <br>
 <br>
 <br>
-
-<%= link_to "New Product", new_product_path %>
+<footer class="footer">
+  <div class="container">
+    <%= link_to "New Product", new_product_path %>
+  </div></footer>

@@ -1,51 +1,56 @@
 <% content_for(:title, "Product | Zaps") %>
-
-<h1><%= @product.name %></h1>
-<h2><%= @product.style %></h2>
-<h2><%= @product.price %></h2>
+<div class="container">
+  <h1><small><small>Product Name:</small></small>  <%= @product.name %></h1>
+  <h1><small><small>Product Style:</small></small> <%= @product.style %></h1>
+  <h1><small><small>Price Per Unit(PPU):</small></small> <%= @product.price %></h1>
+  <h2><small><small>Number of reviews: </small></small>  <%= @product.reviews.count %></h2>
+</div>
 
 <% if @product.reviews.any? %>
-  <h3>Here are the reviews for this product:</h3>
-  <div class="best-reviews">
-    <h4>Best Reviews</h4>
-    <ul>
-      <% @product.reviews.most_recent.best_review.each do |review| %>
-      <li>
-        Name: <%= review.name %><br>
-        <%= review.comment %><br>
-        Rating: <%= review.rating %><br>
-        <%= review.created_at.strftime("%d %b. %Y") %>
-      </li>
-      <br>
-      <% end %>
-    </ul>
-  </div>
-  
-  <div class="all-reviews">
-    <h4>All Reviews</h4>
-    <ul>
-      <% @product.reviews.most_recent.each do |review| %>
-      <li>
-        <%= review.name %> |
-        <%= review.comment %> |
-        <%= review.rating %> |
-        <%= link_to "Delete", product_review_path(@product, review),
-        :data => {:confirm => "Are you sure?",
-          :method => "delete"} %>
+  <div class="container">
+    <h3>Here are the reviews for this product:</h3>
+    <div class="best-reviews">
+      <h4>Best Reviews</h4>
+      <ul>
+        <% @product.reviews.most_recent.best_review.each do |review| %>
+        <li>
+          Name: <%= review.name %><br>
+          <%= review.comment %><br>
+          Rating: <%= review.rating %><br>
+          <%= review.created_at.strftime("%d %b. %Y") %>
         </li>
+        <br>
         <% end %>
       </ul>
+    </div>
   </div>
 
-<% else %>
-  <p>There are no reviews yet!</p>
-<% end %>
+  <div class="container">
+    <div class="all-reviews">
+      <h4>All Reviews</h4>
+      <ol>
+        <% @product.reviews.most_recent.each do |review| %>
+        <li>
+          <%= review.name %> |
+          <%= review.comment %> |
+          <%= review.rating %> |
+          <%= link_to "Delete", product_review_path(@product, review),
+          :data => {:confirm => "Are you sure?",
+            :method => "delete"} %>
+          </li>
+          <% end %>
+        </ol>
+    </div>
+    <% else %>
+    <p>There are no reviews yet!</p>
+    <% end %>
 
-<p><%= link_to "Add a review", new_product_review_path(@product) %></p>
+    <p><%= link_to "Add a review", new_product_review_path(@product) %></p>
 
-<p><%= link_to "Edit", edit_product_path(@product) %></p>
-<p><%= link_to "Delete", product_path(@product),
-                         :data => {:confirm => "You sure?",
-                                   :method => "delete"} %></p>
+    <p><%= link_to "Edit", edit_product_path(@product) %></p>
+    <p><%= link_to "Delete", product_path(@product),
+    :data => {:confirm => "You sure?",
+      :method => "delete"} %></p>
 
-<p><%= link_to "Return to products", products_path %></p>
+      <p><%= link_to "Return to products", products_path %></p>
+  </div>
