@@ -2,7 +2,7 @@ class Review < ActiveRecord::Base
   belongs_to :product
 
   validates :name, :presence => true
-  validates :comment, :presence => true
+  validates :comment, :presence => true, length: { in: 50..250 }
   validates :rating, :presence => true
 
 

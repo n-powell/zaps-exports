@@ -20,25 +20,10 @@
       <% end %>
     </ul>
   </div>
-  <div class="all-list">
+  <div class="all-reviews">
     <h4>All Reviews</h4>
     <ul>
       <% @product.reviews.most_recent.each do |review| %>
-      <li>
-        <%= review.name %> |
-        <%= review.comment %> |
-        <%= review.rating %> |
-        <%= link_to "Delete", product_review_path(@product, review),
-        :data => {:confirm => "Are you sure?",
-          :method => "delete"} %>
-        </li>
-        <% end %>
-      </ul>
-  </div>
-  <div class="all-list">
-    <h4>All Reviews</h4>
-    <ul>
-      <% @product.reviews.oldest.each do |review| %>
       <li>
         <%= review.name %> |
         <%= review.comment %> |

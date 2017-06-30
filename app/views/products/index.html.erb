@@ -14,6 +14,15 @@
   </ul><br>
 </div>
 
+<div class="most-reviews">
+  <h2>Most Reviewed Products</h2>
+  <ul>
+    <% @products.most_reviews.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul><br>
+</div>
+
 <div class="all-list">
   <h3>All Products in inventory</h3>
   <ul>
