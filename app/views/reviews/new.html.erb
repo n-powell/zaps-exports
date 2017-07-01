@@ -1,5 +1,7 @@
+<%= render "layouts/errors", :object => @product %>
+
 <h1>New review for <%= @product.name %></h1>
 
 <%= render 'form' %>
 
-<p><%= link_to "Return to products", product_path(@review.product) %></p>
+<p><%= link_to "Return to product", product_path(@review.product) %></p>
