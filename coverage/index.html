@@ -14,26 +14,26 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-03T15:29:35-07:00">2017-07-03T15:29:35-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-03T15:32:05-07:00">2017-07-03T15:32:05-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">97.7%</span></span>
+    (<span class="covered_percent"><span class="green">97.83%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.46
+         2.57
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>35</b> files in total.
-    <b>304</b> relevant lines. 
-    <span class="green"><b>297</b> lines covered</span> and
+    <b>36</b> files in total.
+    <b>323</b> relevant lines. 
+    <span class="green"><b>316</b> lines covered</span> and
     <span class="red"><b>7</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -97,7 +97,7 @@
         <td>31</td>
         <td>24</td>
         <td>7</td>
-        <td>3.3</td>
+        <td>3.6</td>
       </tr>
       
       <tr>
@@ -107,7 +107,7 @@
         <td>19</td>
         <td>19</td>
         <td>0</td>
-        <td>2.2</td>
+        <td>2.6</td>
       </tr>
       
       <tr>
@@ -157,7 +157,7 @@
         <td>21</td>
         <td>21</td>
         <td>0</td>
-        <td>17.0</td>
+        <td>19.2</td>
       </tr>
       
       <tr>
@@ -366,6 +366,16 @@
         <td>28</td>
         <td>21</td>
         <td>21</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#9275c002c12436c8ec355e01585702da7e5e64bb" class="src_link" title="spec/features/test_rating_pagers_spec.rb">spec/features/test_rating_pagers_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>25</td>
+        <td>19</td>
+        <td>19</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -602,8 +612,8 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="3">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="16" data-linenumber="3">
+          <span class="hits">16</span>
           
           <code class="ruby">    @products = Product.all</code>
         </li>
@@ -626,8 +636,8 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="7">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="7">
+          <span class="hits">7</span>
           
           <code class="ruby">    @product = Product.find(params[:id])</code>
         </li>
@@ -650,14 +660,14 @@
           <code class="ruby">  def new</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="11">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="11">
+          <span class="hits">11</span>
           
           <code class="ruby">    @product = Product.new</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="12">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="12">
+          <span class="hits">11</span>
           
           <code class="ruby">    render :new</code>
         </li>
@@ -680,26 +690,26 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="16">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="16">
+          <span class="hits">11</span>
           
           <code class="ruby">    @product = Product.new(product_params)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="17">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="17">
+          <span class="hits">11</span>
           
           <code class="ruby">    if @product.save</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="18">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="18">
+          <span class="hits">7</span>
           
           <code class="ruby">      flash[:notice] = &quot;Product successfully added!&quot;</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="19">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="19">
+          <span class="hits">7</span>
           
           <code class="ruby">      redirect_to  products_path</code>
         </li>
@@ -878,8 +888,8 @@
           <code class="ruby">    def product_params</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="49">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="49">
+          <span class="hits">11</span>
           
           <code class="ruby">      params.require(:product).permit(:name, :style, :price, :from)</code>
         </li>
@@ -927,14 +937,14 @@
           <code class="ruby">  def new</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="3">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="3">
+          <span class="hits">5</span>
           
           <code class="ruby">    @product = Product.find(params[:product_id])</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="4">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="4">
+          <span class="hits">5</span>
           
           <code class="ruby">    @review = @product.reviews.new</code>
         </li>
@@ -957,20 +967,20 @@
           <code class="ruby">    def create</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="8">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="8">
+          <span class="hits">5</span>
           
           <code class="ruby">      @product = Product.find(params[:product_id])</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="9">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="9">
+          <span class="hits">5</span>
           
           <code class="ruby">      @review = @product.reviews.new(review_params)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="10">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="10">
+          <span class="hits">5</span>
           
           <code class="ruby">      if @review.save</code>
         </li>
@@ -993,14 +1003,14 @@
           <code class="ruby">      else</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="14">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="14">
+          <span class="hits">4</span>
           
           <code class="ruby">        flash[:alert] = &quot;Sorry review not successfully added!&quot;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="15">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="15">
+          <span class="hits">4</span>
           
           <code class="ruby">        render :new</code>
         </li>
@@ -1071,8 +1081,8 @@
           <code class="ruby">    def review_params</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="27">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="27">
+          <span class="hits">5</span>
           
           <code class="ruby">      params.require(:review).permit(:name, :comment, :rating)</code>
         </li>
@@ -1298,80 +1308,80 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="8">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="17" data-linenumber="8">
+          <span class="hits">17</span>
           
           <code class="ruby">  scope :most_recent, -&gt; { order(created_at: :asc).limit(5) }</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="9">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="17" data-linenumber="9">
+          <span class="hits">17</span>
           
           <code class="ruby">  scope :highest_ppu, -&gt; { order(price: :desc).limit(10) }</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="10">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="17" data-linenumber="10">
+          <span class="hits">17</span>
           
           <code class="ruby">  scope :lowest_ppu, -&gt; { order(price: :asc).limit(10) }</code>
         </li>
       
-        <li class="covered" data-hits="29" data-linenumber="11">
-          <span class="hits">29</span>
+        <li class="covered" data-hits="33" data-linenumber="11">
+          <span class="hits">33</span>
           
           <code class="ruby">  scope :is_food, -&gt; { where(style: &quot;Food&quot;) }</code>
         </li>
       
-        <li class="covered" data-hits="29" data-linenumber="12">
-          <span class="hits">29</span>
+        <li class="covered" data-hits="33" data-linenumber="12">
+          <span class="hits">33</span>
           
           <code class="ruby">  scope :is_bev, -&gt; { where(style: &quot;Beverage&quot;) }</code>
         </li>
       
-        <li class="covered" data-hits="29" data-linenumber="13">
-          <span class="hits">29</span>
+        <li class="covered" data-hits="33" data-linenumber="13">
+          <span class="hits">33</span>
           
           <code class="ruby">  scope :is_spice, -&gt; { where(style: &quot;Spice&quot;) }</code>
         </li>
       
-        <li class="covered" data-hits="29" data-linenumber="14">
-          <span class="hits">29</span>
+        <li class="covered" data-hits="33" data-linenumber="14">
+          <span class="hits">33</span>
           
           <code class="ruby">  scope :is_gift, -&gt; { where(style: &quot;Gift&quot;) }</code>
         </li>
       
-        <li class="covered" data-hits="29" data-linenumber="15">
-          <span class="hits">29</span>
+        <li class="covered" data-hits="33" data-linenumber="15">
+          <span class="hits">33</span>
           
           <code class="ruby">  scope :is_sub, -&gt; { where(style: &quot;Subscription&quot;) }</code>
         </li>
       
-        <li class="covered" data-hits="29" data-linenumber="16">
-          <span class="hits">29</span>
+        <li class="covered" data-hits="33" data-linenumber="16">
+          <span class="hits">33</span>
           
           <code class="ruby">  scope :is_usa, -&gt; { where(from: &quot;USA&quot;) }</code>
         </li>
       
-        <li class="covered" data-hits="29" data-linenumber="17">
-          <span class="hits">29</span>
+        <li class="covered" data-hits="33" data-linenumber="17">
+          <span class="hits">33</span>
           
           <code class="ruby">  scope :is_china, -&gt; { where(from: &quot;China&quot;) }</code>
         </li>
       
-        <li class="covered" data-hits="29" data-linenumber="18">
-          <span class="hits">29</span>
+        <li class="covered" data-hits="33" data-linenumber="18">
+          <span class="hits">33</span>
           
           <code class="ruby">  scope :is_brasil, -&gt; { where(from: &quot;Brasil&quot;) }</code>
         </li>
       
-        <li class="covered" data-hits="29" data-linenumber="19">
-          <span class="hits">29</span>
+        <li class="covered" data-hits="33" data-linenumber="19">
+          <span class="hits">33</span>
           
           <code class="ruby">  scope :is_india, -&gt; { where(from: &quot;India&quot;) }</code>
         </li>
       
-        <li class="covered" data-hits="29" data-linenumber="20">
-          <span class="hits">29</span>
+        <li class="covered" data-hits="33" data-linenumber="20">
+          <span class="hits">33</span>
           
           <code class="ruby">  scope :is_france, -&gt; { where(from: &quot;France&quot;) }</code>
         </li>
@@ -1412,8 +1422,8 @@
           <code class="ruby">  .order(&quot;reviews_count DESC&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="27">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="16" data-linenumber="27">
+          <span class="hits">16</span>
           
           <code class="ruby">  .limit(8)</code>
         </li>
@@ -5514,6 +5524,175 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="9275c002c12436c8ec355e01585702da7e5e64bb">
+  <div class="header">
+    <h3>spec/features/test_rating_pagers_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>19</b> relevant lines. 
+      <span class="green"><b>19</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Review.destroy_all</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe &quot;the add a review test&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;gives an error if product rating is not 1 - 5&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit products_path</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;Add New Product&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &#39;Name&#39;, :with =&gt; &#39;Zebraz&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &#39;Style&#39;, :with =&gt; &#39;beverage&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &#39;Price&#39;, :with =&gt; &#39;2.50&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &#39;From&#39;, :with =&gt; &#39;USA&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;Create Product&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    within(:css, &quot;div.full-list&quot;) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      click_on &#39;Zebraz&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;Add a review&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;Create Review&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &#39;Name&#39;, :with =&gt; &#39;John&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &#39;Comment&#39;, :with =&gt; &#39;This is a very fantastic product. I would absulutely recommend this to anyone who asks.&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &#39;Rating&#39;, :with =&gt; &#39;10&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &#39;errors&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">end</code>
