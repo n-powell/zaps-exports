@@ -1,8 +1,11 @@
 <% content_for(:title, "All Products | Zaps") %>
+<div class="jumbotron">
+  <h1>Products</h1>
+</div>
+<h3 class="total"><small>Total: </small><%= @products.count%></h3>
+<br>
 
   <div class="container row">
-    <h1>Products</h1>
-    <h2><small>Total: </small><%= @products.count%></h2>
     <div class="col-sm-3">
       <div class="most-recent">
         <h4>Most <strong><em>Recent</em></strong> Products in Warehouse Inventory</h4>
@@ -98,7 +101,7 @@
     <div class="col-sm-2">
       <div class="products">
         <h2>Spices</h2>
-        <h3><small>Total Spice:</small><%= @products.is_spice.count %></h3>
+        <h3><small>Total Spices:</small><%= @products.is_spice.count %></h3>
         <ul>
           <% @products.is_spice.each do |product| %>
           <li><%= link_to product.name, product_path(product) %></li>
@@ -110,7 +113,7 @@
     <div class="col-sm-2">
       <div class="products">
         <h2>Gifts</h2>
-        <h3><small>Total Gift:</small><%= @products.is_gift.count %></h3>
+        <h3><small>Total Gifts:</small><%= @products.is_gift.count %></h3>
         <ul>
           <% @products.is_gift.each do |product| %>
           <li><%= link_to product.name, product_path(product) %></li>
