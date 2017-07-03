@@ -8,7 +8,7 @@
 
 <% if @product.reviews.any? %>
   <div class="container">
-    <h3>Here are the reviews for this product:</h3>
+    <h3>Customer reviews</h3>
     <div class="best-reviews">
       <h4>Best Reviews</h4>
       <ul>
@@ -41,6 +41,39 @@
           <% end %>
         </ol>
     </div>
+    <div>
+      <h4>Worst Reviews</h4>
+      <ul>
+        <% @product.reviews.worst_reviews.most_recent.each do |review| %>
+        <li>
+          Name: <%= review.name %><br>
+          <%= review.comment %><br>
+          Rating: <%= review.rating %><br>
+          <%= review.created_at.strftime("%d %b. %Y") %>
+        </li>
+        <br>
+        <% end %>
+      </ul>
+    </div>
+
+  <div class="container">
+    <div class="first-review">
+      <h4>First Review</h4>
+      <ol>
+        <% @product.reviews.first_review.each do |review| %>
+        <li>
+          <%= review.name %> |
+          <%= review.comment %> |
+          <%= review.rating %> |
+          <%= link_to "Delete", product_review_path(@product, review),
+          :data => {:confirm => "Are you sure?",
+            :method => "delete"} %>
+          </li>
+          <% end %>
+        </ol>
+    </div>
+
+  </div>
     <% else %>
     <p>There are no reviews yet!</p>
     <% end %>

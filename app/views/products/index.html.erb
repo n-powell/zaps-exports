@@ -15,6 +15,7 @@
       </ul><br>
     </div>
   </div>
+
   <div class="container">
     <div class="most-reviews">
       <h2>Most Reviewed Products</h2>
@@ -25,11 +26,34 @@
       </ul><br>
     </div>
   </div>
+
   <div class="container">
     <div class="all-list">
       <h3>All Products in inventory</h3>
       <ul>
         <% @products.each do |product| %>
+        <li><%= link_to product.name, product_path(product) %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="all-list">
+      <h3>Most Expensive Products</h3>
+      <ul>
+        <% @products.highest_ppu.each do |product| %>
+        <li><%= link_to product.name, product_path(product) %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="all-list">
+      <h3>Cheapest Products</h3>
+      <ul>
+        <% @products.lowest_ppu.each do |product| %>
         <li><%= link_to product.name, product_path(product) %></li>
         <% end %>
       </ul>
