@@ -1,64 +1,77 @@
 <% content_for(:title, "All Products | Zaps") %>
 
-  <div class="container">
+  <div class="container row">
     <h1>Products</h1>
-    <div class="most-recent">
-      <h2>Most recent Products in Warehouse Inventory</h2>
-      <ul>
-        <% @products.most_recent.each do |product| %>
-        <li><%= link_to product.name, product_path(product) %>
-          <br>
-        <%= product.created_at.strftime("%d %b. %Y") %>
-        <br>
-      </li><br>
-        <% end %>
-      </ul><br>
-    </div>
+      <div class="col-sm-6">
+        <div class="most-recent">
+          <h2>Most recent Products in Warehouse Inventory</h2>
+          <ul>
+            <% @products.most_recent.each do |product| %>
+            <li><%= link_to product.name, product_path(product) %>
+              <br>
+              <%= product.created_at.strftime("%d %b. %Y") %>
+              <br>
+            </li><br>
+            <% end %>
+          </ul><br>
+        </div>
+      </div>
+
+
+      <div class="col-sm-6">
+        <div class="most-reviews">
+          <h2>Most Reviewed Products</h2>
+          <ul>
+            <% @products.most_reviews.each do |product| %>
+            <li><%= link_to product.name, product_path(product) %></li>
+            <% end %>
+          </ul><br>
+        </div>
+      </div>
   </div>
 
-  <div class="container">
-    <div class="most-reviews">
-      <h2>Most Reviewed Products</h2>
-      <ul>
-        <% @products.most_reviews.each do |product| %>
-        <li><%= link_to product.name, product_path(product) %></li>
-        <% end %>
-      </ul><br>
+<div class="row">
+  <div class="col-sm-4">
+    <div class="container">
+      <div class="all-list">
+        <h3>All Products in inventory</h3>
+        <ul>
+          <% @products.each do |product| %>
+          <li><%= link_to product.name, product_path(product) %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   </div>
+  <div class="col-sm-4">
+    <div class="container">
+      <div class="all-list">
+        <h3>Cheapest Products</h3>
+        <ul>
+          <% @products.lowest_ppu.each do |product| %>
+          <li><%= link_to product.name, product_path(product) %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
 
-  <div class="container">
-    <div class="all-list">
-      <h3>All Products in inventory</h3>
-      <ul>
-        <% @products.each do |product| %>
-        <li><%= link_to product.name, product_path(product) %></li>
-        <% end %>
-      </ul>
+  </div>
+  <div class="col-sm-4">
+    <div class="container">
+      <div class="all-list">
+        <h3>Most Expensive Products</h3>
+        <ul>
+          <% @products.highest_ppu.each do |product| %>
+          <li><%= link_to product.name, product_path(product) %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   </div>
+</div>
 
-  <div class="container">
-    <div class="all-list">
-      <h3>Most Expensive Products</h3>
-      <ul>
-        <% @products.highest_ppu.each do |product| %>
-        <li><%= link_to product.name, product_path(product) %></li>
-        <% end %>
-      </ul>
-    </div>
-  </div>
 
-  <div class="container">
-    <div class="all-list">
-      <h3>Cheapest Products</h3>
-      <ul>
-        <% @products.lowest_ppu.each do |product| %>
-        <li><%= link_to product.name, product_path(product) %></li>
-        <% end %>
-      </ul>
-    </div>
-  </div>
+
 
 <br>
 <br>
