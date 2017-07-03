@@ -1,10 +1,12 @@
 require 'rails_helper'
 
+Product.destroy_all
+
 describe "the add a product test" do
   it "adds a new product" do
     visit products_path
     click_link 'New Product'
-    fill_in 'Name', :with => 'Viso'
+    fill_in 'Name', :with => 'Zebra'
     fill_in 'Style', :with => 'beverage'
     fill_in 'Price', :with => '2.50'
     click_on 'Create Product'
