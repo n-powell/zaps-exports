@@ -5,7 +5,7 @@ class Product < ActiveRecord::Base
   validates :price, :presence => true
   validates :from, :presence => true
 
-  scope :most_recent, -> { order(created_at: :asc).limit(5) }
+  scope :most_recent, -> { order(created_at: :desc).limit(5) }
   scope :highest_ppu, -> { order(price: :desc).limit(10) }
   scope :lowest_ppu, -> { order(price: :asc).limit(10) }
   scope :is_food, -> { where(style: "Food") }
