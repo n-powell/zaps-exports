@@ -45,8 +45,8 @@
 
 <div class="container">
   <div class="all-reviews">
-    <h4>All Reviews</h4>
-    <h5>Total reviews: <%= @product.reviews.count %></h5>
+    <h3>All Reviews</h3>
+    <h4>Total reviews: <strong><%= @product.reviews.count %></strong></h4>
     <br>
     <ol>
       <% @product.reviews.most_recent.each do |review| %>
@@ -59,13 +59,13 @@
           :method => "delete"} %>
         </li>
         <% end %>
-      </ol>
+    </ol>
   </div>
 
   <div class="container">
     <div class="first-review">
       <h4>First Review</h4>
-      <ol>
+      <ul>
         <% @product.reviews.first_review.each do |review| %>
         <li>
           <%= review.name %> |
@@ -76,19 +76,20 @@
             :method => "delete"} %>
           </li>
           <% end %>
-        </ol>
+      </ul>
     </div>
 
   </div>
   <% else %>
   <p>There are no reviews yet!</p>
   <% end %>
+  <br>
 
   <div class="container">
     <br>
     <div class="row">
       <div class="col-sm-2">
-        <p><%= link_to "Add a review", new_product_review_path(@product) %></p>
+        <p><strong><%= link_to "Add a review", new_product_review_path(@product) %></strong></p>
       </div>
 
       <div class="col-sm-2">
@@ -102,7 +103,7 @@
       </div>
 
       <div class="col-sm-2">
-        <p><%= link_to "Return to products", products_path %></p>
+        <p><strong><%= link_to "Return to products", products_path %></strong></p>
       </div>
 
     </div>
