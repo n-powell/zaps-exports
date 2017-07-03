@@ -3,138 +3,137 @@
   <div class="container row">
     <h1>Products</h1>
     <h2><small>Total: </small><%= @products.count%></h2>
-      <div class="col-sm-3">
-        <div class="most-recent">
-          <h4>Most <strong><em>Recent</em></strong> Products in Warehouse Inventory</h4>
-          <ul>
-            <% @products.most_recent.each do |product| %>
-            <li><%= link_to product.name, product_path(product) %>
-              <br>
-              <%= product.created_at.strftime("%d %b. %Y") %>
-              <br>
-            </li><br>
-            <% end %>
-          </ul><br>
-        </div>
-      </div>
-
-
-      <div class="col-sm-3">
-        <div class="products">
-          <h4><strong><em>Most Reviewed</em></strong> Products</h4>
-          <ul>
-            <% @products.most_reviews.each do |product| %>
-            <li><%= link_to product.name, product_path(product) %></li>
-            <% end %>
-          </ul><br>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="container">
-          <div class="all-list">
-            <h4><strong><em>Cheapest</em></strong> Products</h4>
-            <ol>
-              <% @products.lowest_ppu.each do |product| %>
-              <li><%= link_to product.name, product_path(product) %></li>
-              <% end %>
-            </ol>
-          </div>
-        </div>
-
-      </div>
-      <div class="col-sm-3">
-        <div class="container">
-          <div class="all-list">
-            <h4><strong><em>Most Expensive</em></strong> Products</h4>
-            <ol>
-              <% @products.highest_ppu.each do |product| %>
-              <li><%= link_to product.name, product_path(product) %></li>
-              <% end %>
-            </ol>
-          </div>
-        </div>
-      </div>
-  </div>
-
-      <div class="col-sm-2">
-        <div class="products">
-          <h2>Foods</h2>
-          <h3><small>Total Foods:</small><%= @products.is_food.count %></h3>
-          <ul>
-            <% @products.is_food.each do |product| %>
-            <li><%= link_to product.name, product_path(product) %></li>
-            <% end %>
-          </ul><br>
-        </div>
-      </div>
-  </div>
-
-      <div class="col-sm-2">
-        <div class="products">
-          <h2>Beverages</h2>
-          <h3><small>Total Beverages:</small><%= @products.is_bev.count %></h3>
-          <ul>
-            <% @products.is_bev.each do |product| %>
-            <li><%= link_to product.name, product_path(product) %></li>
-            <% end %>
-          </ul><br>
-        </div>
-      </div>
-  </div>
-
-      <div class="col-sm-2">
-        <div class="products">
-          <h2>Spices</h2>
-          <h3><small>Total Spice:</small><%= @products.is_spice.count %></h3>
-          <ul>
-            <% @products.is_spice.each do |product| %>
-            <li><%= link_to product.name, product_path(product) %></li>
-            <% end %>
-          </ul><br>
-        </div>
-      </div>
-  </div>
-
-      <div class="col-sm-2">
-        <div class="products">
-          <h2>Gifts</h2>
-          <h3><small>Total Gift:</small><%= @products.is_gift.count %></h3>
-          <ul>
-            <% @products.is_gift.each do |product| %>
-            <li><%= link_to product.name, product_path(product) %></li>
-            <% end %>
-          </ul><br>
-        </div>
-      </div>
-  </div>
-
-      <div class="col-sm-2">
-        <div class="products">
-          <h2>Subscriptions</h2>
-          <h3><small>Total Gift:</small><%= @products.is_sub.count %></h3>
-          <ul>
-            <% @products.is_sub.each do |product| %>
-            <li><%= link_to product.name, product_path(product) %></li>
-            <% end %>
-          </ul><br>
-        </div>
-      </div>
-  </div>
-
-<div class="row">
-  <div class="col-sm-2">
-    <div class="container">
-      <div class="all-list">
-        <h3>All Products</h3>
+    <div class="col-sm-3">
+      <div class="most-recent">
+        <h4>Most <strong><em>Recent</em></strong> Products in Warehouse Inventory</h4>
         <ul>
-          <% @products.each do |product| %>
+          <% @products.most_recent.each do |product| %>
+          <li><%= link_to product.name, product_path(product) %>
+            <br>
+            <%= product.created_at.strftime("%d %b. %Y") %>
+            <br>
+          </li><br>
+          <% end %>
+        </ul><br>
+      </div>
+    </div>
+
+
+    <div class="col-sm-3">
+      <div class="products">
+        <h4><strong><em>Most Reviewed</em></strong> Products</h4>
+        <ul>
+          <% @products.most_reviews.each do |product| %>
           <li><%= link_to product.name, product_path(product) %></li>
           <% end %>
-        </ul>
+        </ul><br>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="container">
+        <div class="all-list">
+          <h4><strong><em>Cheapest</em></strong> Products</h4>
+          <ol>
+            <% @products.lowest_ppu.each do |product| %>
+            <li><%= link_to product.name, product_path(product) %></li>
+            <% end %>
+          </ol>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm-3">
+      <div class="container">
+        <div class="all-list">
+          <h4><strong><em>Most Expensive</em></strong> Products</h4>
+          <ol>
+            <% @products.highest_ppu.each do |product| %>
+            <li><%= link_to product.name, product_path(product) %></li>
+            <% end %>
+          </ol>
+        </div>
       </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-sm-2">
+      <div class="container">
+        <div class="all-list">
+          <h3>All Products</h3>
+          <ul>
+            <% @products.each do |product| %>
+            <li><%= link_to product.name, product_path(product) %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-2">
+      <div class="products">
+        <h2>Foods</h2>
+        <h3><small>Total Foods:</small><%= @products.is_food.count %></h3>
+        <ul>
+          <% @products.is_food.each do |product| %>
+          <li><%= link_to product.name, product_path(product) %></li>
+          <% end %>
+        </ul><br>
+      </div>
+    </div>
+
+    <div class="col-sm-2">
+      <div class="products">
+        <h2>Beverages</h2>
+        <h3><small>Total Beverages:</small><%= @products.is_bev.count %></h3>
+        <ul>
+          <% @products.is_bev.each do |product| %>
+          <li><%= link_to product.name, product_path(product) %></li>
+          <% end %>
+        </ul><br>
+      </div>
+    </div>
+
+
+    <div class="col-sm-2">
+      <div class="products">
+        <h2>Spices</h2>
+        <h3><small>Total Spice:</small><%= @products.is_spice.count %></h3>
+        <ul>
+          <% @products.is_spice.each do |product| %>
+          <li><%= link_to product.name, product_path(product) %></li>
+          <% end %>
+        </ul><br>
+      </div>
+    </div>
+
+    <div class="col-sm-2">
+      <div class="products">
+        <h2>Gifts</h2>
+        <h3><small>Total Gift:</small><%= @products.is_gift.count %></h3>
+        <ul>
+          <% @products.is_gift.each do |product| %>
+          <li><%= link_to product.name, product_path(product) %></li>
+          <% end %>
+        </ul><br>
+      </div>
+    </div>
+
+    <div class="col-sm-2">
+      <div class="products">
+        <h2>Subscriptions</h2>
+        <h3><small>Total Gift:</small><%= @products.is_sub.count %></h3>
+        <ul>
+          <% @products.is_sub.each do |product| %>
+          <li><%= link_to product.name, product_path(product) %></li>
+          <% end %>
+        </ul><br>
+    </div>
+  </div>
 </div>
+
+
+
 
 
 <br>
