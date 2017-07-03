@@ -72,7 +72,7 @@
       <div class="col-sm-4">
         <div class="products">
           <h2>Beverages</h2>
-          <h3><small>Total Beverages:</small><%= @products.is_food.count %></h3>
+          <h3><small>Total Beverages:</small><%= @products.is_bev.count %></h3>
           <ul>
             <% @products.is_bev.each do |product| %>
             <li><%= link_to product.name, product_path(product) %></li>

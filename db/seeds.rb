@@ -1,7 +1,7 @@
 Product.destroy_all
 Review.destroy_all
 
-48.times do |index|
+78.times do |index|
   Product.create!(name: Faker::App.name,
                         style: "Food",
                         price: Faker::Number.decimal(2))
