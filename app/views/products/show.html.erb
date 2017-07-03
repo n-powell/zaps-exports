@@ -7,9 +7,10 @@
 </div>
 
 <% if @product.reviews.any? %>
-<div class="container row">
+<h3 id="review-h3">Customer reviews</h3>
+<br>
+<div class="container row" id="best-worst-div">
   <div class="container col-sm-6">
-      <h3>Customer reviews</h3>
       <div class="best-reviews">
         <h4>Best Reviews</h4>
         <ul>
@@ -40,23 +41,26 @@
         </ul>
     </div>
 </div>
+<br>
 
-  <div class="container">
-    <div class="all-reviews">
-      <h4>All Reviews</h4>
-      <ol>
-        <% @product.reviews.most_recent.each do |review| %>
-        <li>
-          <%= review.name %> |
-          <%= review.comment %> |
-          <%= review.rating %> |
-          <%= link_to "Delete", product_review_path(@product, review),
-          :data => {:confirm => "Are you sure?",
-            :method => "delete"} %>
-          </li>
-          <% end %>
-        </ol>
-    </div>
+<div class="container">
+  <div class="all-reviews">
+    <h4>All Reviews</h4>
+    <h5>Total reviews: <%= @product.reviews.count %></h5>
+    <br>
+    <ol>
+      <% @product.reviews.most_recent.each do |review| %>
+      <li>
+        <%= review.name %> |
+        <%= review.comment %> |
+        <%= review.rating %> |
+        <%= link_to "Delete", product_review_path(@product, review),
+        :data => {:confirm => "Are you sure?",
+          :method => "delete"} %>
+        </li>
+        <% end %>
+      </ol>
+  </div>
 
   <div class="container">
     <div class="first-review">
@@ -76,18 +80,33 @@
     </div>
 
   </div>
-    <% else %>
-    <div class="container">
-      <p>There are no reviews yet!</p>
-      <% end %>
+  <% else %>
+  <p>There are no reviews yet!</p>
+  <% end %>
 
-      <p><%= link_to "Add a review", new_product_review_path(@product) %></p>
+  <div class="container">
+    <br>
+    <div class="row">
+      <div class="col-sm-2">
+        <p><%= link_to "Add a review", new_product_review_path(@product) %></p>
+      </div>
 
-      <p><%= link_to "Edit", edit_product_path(@product) %></p>
-      <p><%= link_to "Delete", product_path(@product),
-      :data => {:confirm => "You sure?",
-        :method => "delete"} %></p>
+      <div class="col-sm-2">
+        <p><%= link_to "Edit", edit_product_path(@product) %></p>
+      </div>
 
+      <div class="col-sm-2">
+        <p><%= link_to "Delete", product_path(@product),
+        :data => {:confirm => "You sure?",
+          :method => "delete"} %></p>
+      </div>
+
+      <div class="col-sm-2">
         <p><%= link_to "Return to products", products_path %></p>
+      </div>
+
     </div>
+
+
   </div>
+</div>
