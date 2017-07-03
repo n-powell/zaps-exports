@@ -7,6 +7,7 @@ describe "the add a product test" do
     fill_in 'Name', :with => 'Zebraz'
     fill_in 'Style', :with => 'beverage'
     fill_in 'Price', :with => '2.50'
+    fill_in 'From', :with => 'USA'
     click_on 'Create Product'
     within(:css, "div.full-list") do
       click_on 'Zebraz'
