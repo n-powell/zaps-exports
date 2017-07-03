@@ -9,6 +9,8 @@ class Product < ActiveRecord::Base
   scope :lowest_ppu, -> { order(price: :asc).limit(10) }
   scope :is_food, -> { where(style: "Food") }
   scope :is_bev, -> { where(style: "Beverage") }
+  scope :is_spice, -> { where(style: "Spice") }
+  scope :is_gift, -> { where(style: "Gift") }
 
   scope :most_reviews, -> {(
   select("products.id, products.name, products.style, count(reviews.id) as reviews_count")
