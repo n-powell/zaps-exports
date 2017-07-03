@@ -4,30 +4,42 @@ Review.destroy_all
 78.times do |index|
   Product.create!(name: Faker::App.name,
                         style: "Food",
+                        from: "China",
                         price: Faker::Number.decimal(2))
 end
 
 29.times do |index|
   Product.create!(name: Faker::App.name,
                         style: "Beverage",
+                        from: "Brasil",
+                        price: Faker::Number.decimal(2))
+end
+
+29.times do |index|
+  Product.create!(name: Faker::App.name,
+                        style: "Beverage",
+                        from: "France",
                         price: Faker::Number.decimal(2))
 end
 
 12.times do |index|
   Product.create!(name: Faker::App.name,
                         style: "Gift",
+                        from: "India",
                         price: Faker::Number.decimal(2))
 end
 
 18.times do |index|
   Product.create!(name: Faker::App.name,
                         style: "Spice",
+                        from: "India",
                         price: Faker::Number.decimal(2))
 end
 
 5.times do |index|
   Product.create!(name: Faker::App.name,
                         style: "Subscription",
+                        from: "USA",
                         price: Faker::Number.decimal(2))
 end
 

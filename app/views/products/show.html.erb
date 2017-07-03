@@ -4,6 +4,7 @@
   <h1><small><small>Product Style:</small></small> <%= @product.style %></h1>
   <h1><small><small>Price Per Unit(PPU):</small></small> <%= @product.price %></h1>
   <h2><small><small>Number of reviews: </small></small>  <%= @product.reviews.count %></h2>
+  <h2><small><small>Made in: </small></small>  <%= @product.from %></h2>
 </div>
 
 <% if @product.reviews.any? %>

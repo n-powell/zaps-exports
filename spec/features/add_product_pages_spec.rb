@@ -9,6 +9,7 @@ describe "the add a product test" do
     fill_in 'Name', :with => 'Zebra'
     fill_in 'Style', :with => 'beverage'
     fill_in 'Price', :with => '2.50'
+    fill_in 'From', :with => 'USA'
     click_on 'Create Product'
     expect(page).to have_content 'Products'
   end

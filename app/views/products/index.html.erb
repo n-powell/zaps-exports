@@ -33,6 +33,7 @@
         </ul><br>
       </div>
     </div>
+
     <div class="col-sm-2">
       <div class="container">
         <div class="all-list">
@@ -61,10 +62,75 @@
   </div>
 
   <div class="row">
+
+    <div class="col-sm-2">
+      <div class="products">
+        <h4><strong><em>Products of USA</em></strong></h4>
+        <h3><small>Total: </small><%= @products.is_usa.count %></h3>
+        <ul>
+          <% @products.is_usa.each do |product| %>
+          <li><%= link_to product.name, product_path(product) %></li>
+          <% end %>
+        </ul><br>
+      </div>
+    </div>
+
+    <div class="col-sm-2">
+      <div class="products">
+        <h4><strong><em>Products of China</em></strong></h4>
+        <h3><small>Total: </small><%= @products.is_china.count %></h3>
+        <ul>
+          <% @products.is_china.each do |product| %>
+          <li><%= link_to product.name, product_path(product) %></li>
+          <% end %>
+        </ul><br>
+      </div>
+    </div>
+
+    <div class="col-sm-2">
+      <div class="products">
+        <h4><strong><em>Products of Brasil</em></strong></h4>
+        <h3><small>Total: </small><%= @products.is_brasil.count %></h3>
+        <ul>
+          <% @products.is_brasil.each do |product| %>
+          <li><%= link_to product.name, product_path(product) %></li>
+          <% end %>
+        </ul><br>
+      </div>
+    </div>
+
+    <div class="col-sm-2">
+      <div class="products">
+        <h4><strong><em>Products of India</em></strong></h4>
+        <h3><small>Total: </small><%= @products.is_india.count %></h3>
+        <ul>
+          <% @products.is_india.each do |product| %>
+          <li><%= link_to product.name, product_path(product) %></li>
+          <% end %>
+        </ul><br>
+      </div>
+    </div>
+
+    <div class="col-sm-2">
+      <div class="products">
+        <h4><strong><em>Products of France</em></strong></h4>
+        <h3><small>Total: </small><%= @products.is_france.count %></h3>
+        <ul>
+          <% @products.is_france.each do |product| %>
+          <li><%= link_to product.name, product_path(product) %></li>
+          <% end %>
+        </ul><br>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
     <div class="col-sm-2">
       <div class="container">
         <div class="full-list">
           <h3>All Products</h3>
+          <h3><small>Total: </small><%= @products.count%></h3>
           <ul>
             <% @products.each do |product| %>
             <li><%= link_to product.name, product_path(product) %></li>
@@ -77,7 +143,7 @@
     <div class="col-sm-2">
       <div class="products">
         <h2>Foods</h2>
-        <h3><small>Total Foods:</small><%= @products.is_food.count %></h3>
+        <h3><small>Total Foods: </small><%= @products.is_food.count %></h3>
         <ul>
           <% @products.is_food.each do |product| %>
           <li><%= link_to product.name, product_path(product) %></li>
@@ -89,7 +155,7 @@
     <div class="col-sm-2">
       <div class="products">
         <h2>Beverages</h2>
-        <h3><small>Total Beverages:</small><%= @products.is_bev.count %></h3>
+        <h3><small>Total Beverages: </small><%= @products.is_bev.count %></h3>
         <ul>
           <% @products.is_bev.each do |product| %>
           <li><%= link_to product.name, product_path(product) %></li>
@@ -102,7 +168,7 @@
     <div class="col-sm-2">
       <div class="products">
         <h2>Spices</h2>
-        <h3><small>Total Spices:</small><%= @products.is_spice.count %></h3>
+        <h3><small>Total Spices: </small><%= @products.is_spice.count %></h3>
         <ul>
           <% @products.is_spice.each do |product| %>
           <li><%= link_to product.name, product_path(product) %></li>
@@ -114,7 +180,7 @@
     <div class="col-sm-2">
       <div class="products">
         <h2>Gifts</h2>
-        <h3><small>Total Gifts:</small><%= @products.is_gift.count %></h3>
+        <h3><small>Total Gifts: </small><%= @products.is_gift.count %></h3>
         <ul>
           <% @products.is_gift.each do |product| %>
           <li><%= link_to product.name, product_path(product) %></li>
@@ -126,7 +192,7 @@
     <div class="col-sm-2">
       <div class="products">
         <h2>Subscriptions</h2>
-        <h3><small>Total Gift:</small><%= @products.is_sub.count %></h3>
+        <h3><small>Total Subscriptions: </small><%= @products.is_sub.count %></h3>
         <ul>
           <% @products.is_sub.each do |product| %>
           <li><%= link_to product.name, product_path(product) %></li>
