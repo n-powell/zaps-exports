@@ -12,7 +12,7 @@
     <div class="best-reviews">
       <h4>Best Reviews</h4>
       <ul>
-        <% @product.reviews.most_recent.best_review.each do |review| %>
+        <% @product.reviews.best_reviews.each do |review| %>
         <li>
           Name: <%= review.name %><br>
           <%= review.comment %><br>
