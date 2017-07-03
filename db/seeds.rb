@@ -25,6 +25,12 @@ end
                         price: Faker::Number.decimal(2))
 end
 
+5.times do |index|
+  Product.create!(name: Faker::App.name,
+                        style: "Subscription",
+                        price: Faker::Number.decimal(2))
+end
+
 314.times do |index|
   Review.create!(name: Faker::App.name,
                         comment: Faker::Lorem.sentence(10, true, 4),

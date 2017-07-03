@@ -11,6 +11,7 @@ class Product < ActiveRecord::Base
   scope :is_bev, -> { where(style: "Beverage") }
   scope :is_spice, -> { where(style: "Spice") }
   scope :is_gift, -> { where(style: "Gift") }
+  scope :is_sub, -> { where(style: "Subscription") }
 
   scope :most_reviews, -> {(
   select("products.id, products.name, products.style, count(reviews.id) as reviews_count")
