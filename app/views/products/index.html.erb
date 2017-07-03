@@ -1,6 +1,7 @@
 <% content_for(:title, "All Products | Zaps") %>
 <div class="jumbotron">
   <h1>Products</h1>
+  <h4><%= link_to "Add New Product", new_product_path %></h4>
 </div>
 <h3 class="total"><small>Total: </small><%= @products.count%></h3>
 <br>
