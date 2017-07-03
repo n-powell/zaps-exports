@@ -19,4 +19,10 @@ describe "the add a product test" do
     click_on 'Create Product'
     expect(page).to have_content 'errors'
   end
+
+  it 'is private by default' do
+    task = FactoryGirl.create(:product)
+    visit products_path
+    expect(page).to have_content 'Loopey'
+  end
 end
